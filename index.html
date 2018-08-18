@@ -1,0 +1,63 @@
+<html lang="en">
+
+
+<head>
+  <title>Select your region</title>
+  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <h2>Welcome to ansargallery.com</h2>
+  <h3>Please select your region</h3>
+  <ul>
+    <li>
+      <a href="/qa_en/index.html"><i class="em em-flag-qa"></i></i></a>
+    </li>
+    <li>
+      <a href="/ua_en/index.html"><i class="em em-flag-ae"></i></a>
+    </li>
+    <li>
+      <a href="/bh_en/index.html"><i class="em em-flag-bh"></i></a>
+    </li>
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+
+      var domain = "http://192.168.2.102:5500";
+      var reg = Cookies.get('region');
+      var lang = Cookies.get('language');
+
+      if (reg == "qa" && lang == "en") {
+        window.location.replace(domain + "/qa_en/index.html");
+      }
+      else if (reg == "qa" && lang == "ar") {
+        window.location.replace(domain + "/qa_ar/index.html");
+      }
+      else if (reg == "ua" && lang == "en") {
+        window.location.replace(domain + "/ua_en/index.html");
+      }
+      else if (reg == "ua" && lang == "ar") {
+        window.location.replace(domain + "/ua_ar/index.html");
+      }
+      else if (reg == "bh" && lang == "en") {
+        window.location.replace(domain + "/bh_en/index.html");
+      }
+      else if (reg == "bh" && lang == "ar") {
+        window.location.replace(domain + "/bh_ar/index.html");
+      } else {
+        console.log("There is no region selected before");
+      }
+    });
+
+  </script>
+
+
+</body>
+
+</html>
