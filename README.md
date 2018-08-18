@@ -2,6 +2,6 @@
 
 ### Cookie storing example for choosing website region and language
 
-![alt](Capture.jpg)
+![alt](Capture.JPG)
 
 #### TODO : Improve code
